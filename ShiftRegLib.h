@@ -1,7 +1,7 @@
 #ifndef SHIFTREG_LIB_H
 #define SHIFTREG_LIB_H
 
-#include <WProgram.h>
+#include <arduino.h>
 #include <inttypes.h>
 
 class ShiftRegLib {
