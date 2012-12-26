@@ -27,6 +27,6 @@ int outStates[TOTAL_STATES][8] = {
  * so a delay of 3 seconds would be 3*1000
  * and a delay of 5 minutes would be 5*60*1000
  */
-#define MAX_TIMEOUT 6*1000 // in milliseconds ==> (minutes*60*1000)
+#define MAX_TIMEOUT 20*1000UL // in milliseconds ==> (minutes*60*1000)
 
 #endif // __CONFIG_H__

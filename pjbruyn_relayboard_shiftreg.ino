@@ -21,7 +21,7 @@ int potval = 0;
 ShiftRegLib sr;
 
 unsigned long tmark = 0;  // reference timestamp
-unsigned long int interval = MAX_TIMEOUT;  // milliseconds to wait
+unsigned long interval = MAX_TIMEOUT;  // milliseconds to wait
 
 #define TIMECTL_MAXTICKS  4294967295L
 #define TIMECTL_INIT      0
