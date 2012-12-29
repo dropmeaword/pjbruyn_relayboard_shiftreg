@@ -46,10 +46,11 @@ int timeout(unsigned long tinterval, unsigned long *treference){
   return(result);  
 }
 
-int map(int value, int s1, int e1, int s2, int e2) {
-    float ftmp = ( s2 + (e2 - s2) * ((float)(value - s1) / (float)(e1 - s1)) );
-    return ceil(ftmp);
+unsigned long xmap(unsigned long x, unsigned long in_min, unsigned long in_max, unsigned long out_min, unsigned long out_max)
+{
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
+
 
 int arr2int(int *arr) {
   int i;
@@ -97,7 +98,7 @@ void loop() {
     int currentReading = pot_read();
     if( currentReading != potval ) {
       potval = currentReading;
-      interval = map(potval, 0, 1024, 0, MAX_TIMEOUT); 
+      interval = xmap(potval, 0, 1024, 0, MAX_TIMEOUT); 
       Serial.print("interval = ");
       Serial.print(interval);
       Serial.print("ms.\n");
